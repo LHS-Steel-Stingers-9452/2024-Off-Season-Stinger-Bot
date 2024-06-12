@@ -26,7 +26,7 @@ public class Constants {
         public static final double whealDiameter = Units.inchesToMeters(4.00);
         public static final double wheelCircumference = whealDiameter * Math.PI;
 
-        public static final double driveGearRatio = (6.75 / 1.0); //6.75:1
+        public static final double driveGearRatio = (5.9 / 1.0); //5.9:1
         public static final double angleGearRatio = (150.0/7.0) / 1.0; //150/7:1
 
         //Encoder converstion factors
@@ -49,11 +49,11 @@ public class Constants {
 
         );
 
-        public static final double maxSpeed = 4.6; //meters per second
+        public static final double maxSpeed = 5.24; //meters per second
         public static final double maxAngleVelocity = 10.5; // radians per sec
 
-        public static final int driveCurrentLimit = 50;//optimal limit based on NEO current limit data
-        public static final int angleCurrentLimit = 40;
+        public static final int driveCurrentLimit = 40;//optimal limit based on NEO current limit data
+        public static final int angleCurrentLimit = 20;
 
         public static final double voltageComp = 12.0;
  
@@ -159,6 +159,7 @@ public class Constants {
         public static final int followID = 20;
         public static final double kS = .45;
         public static final double kV = 1.77;//1.35
+        public static final double kG = 0;//Needs to be tunned
         public static final double kP = 40;//39
         public static final double kI = 0;//0
         public static final double kD = .0005;//.001
@@ -169,6 +170,12 @@ public class Constants {
         public static final double kErrorTolerance = .05;
         public static final double kSensorToMechanismGearRatio = 92.85;//Actual: 92.8571428571
         public static final int kCurrentLimit = 70;
+
+        // Pre-set shots 
+        public static final double AmpState = 0.23;
+        public static final double ShooterSSTate = 0; 
+        public static final double CommunityShot = 0.024;
+        public static final double MidState = 0.044; // actual mid postion should be around 0.13185
     }
 
     public static final class ClimberConstants{
